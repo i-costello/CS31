@@ -1,3 +1,16 @@
-	In Step 5, there are many combinations of integers that produce incorrect, unusual, and nonsensical output: for numberSurveyed = 10, numKeep = 5, numRefund = 5, the program gives correct percentages but also outputs that “More people will demand a refund than keep their car.” because there is no code to account for a situation in which numKeep is equal to numRefund; for numberSurveyed = -2, numKeep = 1, numRefund = -6, the percentages are nonsensical because the input is nonsensical– that is, the program allows negative input although it is not possible to have a negative number of people surveyed, or who keep their car, etc; finally, for numberSurveyed = 5, numKeep = 4, numRefund = 3, the sum of numKeep and numRefund exceeds numberSurveyed, which produces an output of over 100%.
-	In logic_error.cpp, I reversed the relational operator from a “greater than” sign to a “less than” sign in line number 30 (if numKeep < numRefund). As a result, percentages of the survey results will be calculated correctly, but when the program runs the code to compare numKeep to numRefund, it will output that the former is greater than the latter when the latter is greater than the former and vice versa (i.e. it will compare them incorrectly).
-	In compile_error.cpp, I first removed the latter quotation mark in line 15, so that the program would not reach the end of the line, and would take anything after the first quotation mark on that line to be part of the output string. Resulting error message: “Missing terminating '"' character”. For the second compilation error, I changed the identifier “pctRefund” to “%Refund”. Because identifiers must start with a letter, this also resulted in a compile error. Resulting error message: “Expected unqualified-id”.
+	In Step 5, there are many combinations of integers that produce incorrect, unusual, and nonsensical output: for
+numberSurveyed = 10, numKeep = 5, numRefund = 5, the program gives correct percentages but also outputs that “More people will 
+demand a refund than keep their car.” because there is no code to account for a situation in which numKeep is equal to 
+numRefund; for numberSurveyed = -2, numKeep = 1, numRefund = -6, the percentages are nonsensical because the input is 
+nonsensical– that is, the program allows negative input although it is not possible to have a negative number of people 
+surveyed, or who keep their car, etc; finally, for numberSurveyed = 5, numKeep = 4, numRefund = 3, the sum of numKeep and 
+numRefund exceeds numberSurveyed, which produces an output of over 100%.
+	In logic_error.cpp, I reversed the relational operator from a “greater than” sign to a “less than” sign in line number 
+30 (if numKeep < numRefund). As a result, percentages of the survey results will be calculated correctly, but when the program 
+runs the code to compare numKeep to numRefund, it will output that the former is greater than the latter when the latter is 
+greater than the former and vice versa (i.e. it will compare them incorrectly).
+	In compile_error.cpp, I first removed the latter quotation mark in line 15, so that the program would not reach the 
+end of the line, and would take anything after the first quotation mark on that line to be part of the output string. 
+Resulting error message: “Missing terminating '"' character”. For the second compilation error, I changed the identifier 
+“pctRefund” to “%Refund”. Because identifiers must start with a letter, this also resulted in a compile error. Resulting error 
+message: “Expected unqualified-id”.
